@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 600px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>Katie's Google Maps API</h1>
+    <div id="map"></div>
+		<script>
+			function initMap() {
+				var mapDiv = document.getElementById('map');
+				var map = new google.maps.Map(mapDiv, {
+					center: {lat: 41.4592, lng: -72.71089},
+					zoom: 8
+				});
+			}
+		
+			function initMap() {
+				var myLatLng = {lat: 41.4592, lng: -72.71089};
+
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 4,
+					center: myLatLng
+				});
+
+				var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map,
+					title: 'My House'
+				}); 
+			}
+		</script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBChGM4pgqlhi4gtB_w6urzb1sCV6eDpGk&callback=initMap">
+    </script>
+  </body>
+</html>

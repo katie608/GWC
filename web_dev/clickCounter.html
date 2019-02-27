@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Counter</title>
+    <script>
+		function imageFunction() {
+			var picture = document.getElementById("image1");
+			//picture.src = "thisissand3.jpg";
+			
+			console.log(picture.src);
+			if (picture.src == "file:///C:/Users/GWC1/Desktop/thisissand4.jpg"){
+				picture.src = "thisissand3.jpg"
+			}else {
+				picture.src = "thisissand4.jpg"
+			} 
+		}
+	</script>
+  </head>
+  <body>
+    <button id="btn" onclick="imageFunction()">Click me!</button>
+    <img id="image1" src="thisissand.jpg" alt="thisissand">
+	<p></p>
+  </body>
+</html>
